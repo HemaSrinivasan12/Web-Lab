@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Modal styling */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal:target {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Education</h2>
+        <p>I have completed my education with the following qualifications:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Institution</th>
+                    <th>Board/University</th>
+                    <th>Year of Passing</th>
+                    <th>Major/Stream</th>
+                    <th>Percentage/CGPA</th>
+                    <th>Certificate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10th Grade</td>
+                    <td>Bannari Amman Vidya Niketan Matriculation Higher Secondary School</td>
+                    <td>State Board</td>
+                    <td>2021</td>
+                    <td>Science</td>
+                    <td>Pass</td>
+                    <td><a href="#cert10">View Certificate</a></td>
+                </tr>
+                <tr>
+                    <td>12th Grade</td>
+                    <td>Bannari Amman Vidya Niketan Matriculation Higher Secondary School</td>
+                    <td>State Board</td>
+                    <td>2023</td>
+                    <td>Computer Science</td>
+                    <td>76%</td>
+                    <td><a href="#cert12">View Certificate</a></td>
+                </tr>
+                <tr>
+                    <td>College</td>
+                    <td>Kongu Engineering College</td>
+                    <td>Autonomus</td>
+                    <td>-</td>
+                    <td>B.Tech IT</td>
+                    <td>N/A</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for 10th Certificate -->
+    <div id="cert10" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">✖</a>
+            <img src="10th.jpg" alt="10th Certificate">
+        </div>
+    </div>
+
+    <!-- Modal for 12th Certificate -->
+    <div id="cert12" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">✖</a>
+            <img src="12th.jpg" alt="12th Certificate">
+        </div>
+    </div>
+
+</body>
+</html>
