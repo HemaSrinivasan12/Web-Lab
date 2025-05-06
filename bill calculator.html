@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Calculator</title>
+</head>
+<body>
+    <h2>Bill Calculator</h2>
+    <label>Price: ₹</label>
+    <input type="number" id="price" value="0"><br><br>
+    <label>Quantity:</label>
+    <input type="number" id="quantity"><br><br>
+    <label>Discount (%):</label>
+    <input type="number" id="discount" value="0"><br><br>
+    <label>Round Off:</label>
+    <input type="checkbox" id="roundOff"><br><br>
+    <button onclick="calculateBill()">Calculate</button>
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <script>
+        function calculateBill() {
+            let price = parseFloat(document.getElementById("price").value) 
+            let quantity = parseInt(document.getElementById("quantity").value) 
+            let discount = parseFloat(document.getElementById("discount").value)
+            let roundOff = document.getElementById("roundOff").checked;
+            
+            let subtotal = price * quantity;
+            let discountAmount = (subtotal * discount) / 100;
+            let total = subtotal - discountAmount;
+            
+            if (roundOff) {
+                total = Math.round(total);
+            }
+            
+            document.getElementById("total").innerText = total;
+        }
+    </script>
+</body>
+</html>
